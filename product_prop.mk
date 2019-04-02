@@ -1,3 +1,4 @@
+
 # FM
 PRODUCT_PRODUCT_PROPERTIES += \
    vendor.bluetooth.soc=cherokee \
@@ -17,12 +18,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     media.settings.xml=/system/etc/media_profiles_vendor.xml
 
-
-# Pixel identification
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.fingerprint=google/flame/flame:10/QQ3A.200705.002/6506677:user/release-keys
-
-# Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
