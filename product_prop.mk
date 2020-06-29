@@ -20,7 +20,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Pixel identification
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.fingerprint=google/flame/flame:10/QQ3A.200605.001/6392402:user/release-keys
+    ro.build.fingerprint=google/flame/flame:10/QQ3A.200705.002/6506677:user/release-keys
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -42,3 +42,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 #Privaap Permissions
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=log
+
+# Zygote
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
