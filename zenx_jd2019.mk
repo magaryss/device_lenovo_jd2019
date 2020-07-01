@@ -16,14 +16,14 @@
 
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common CesiumOS stuff.
-$(call inherit-product, vendor/cesium/config/common_full_phone.mk)
+# Inherit some common ZenX-OS stuff.
+$(call inherit-product, vendor/zenx/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-CUSTOM_BUILD_TYPE := OFFICIAL
+ZENX_BUILD_TYPE := Official
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cesium_jd2019
+PRODUCT_NAME := zenx_jd2019
 PRODUCT_BRAND := lenovo
 PRODUCT_DEVICE := jd2019
 PRODUCT_MANUFACTURER := lenovo
