@@ -1,6 +1,6 @@
 [
   {
-    "repository" : "vendor_lenovo",
-    "target_path": "vendor/lenovo"
+    "repository" : "vendor_lenovo_jd2019",
+    "target_path": "vendor/lenovo/jd2019"
   }
 ]
