@@ -64,8 +64,8 @@ PRODUCT_COPY_FILES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni \
+    FM2 \
+    libqcomfm_jni \
     qcom.fmradio
 
 PRODUCT_BOOT_JARS += \
