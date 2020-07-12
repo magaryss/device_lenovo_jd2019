@@ -46,3 +46,13 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Zygote
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+#Recorder
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.hw=1 \
+    debug.hwui.renderer=skiagl \
+    debug.cpurend.vsync=false \
+    vendor.gralloc.disable_ubwc=0 \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno
