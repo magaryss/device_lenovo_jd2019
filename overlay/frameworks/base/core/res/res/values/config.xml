@@ -561,7 +561,7 @@
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
          to put the display into a low power state and allow the application processor
-         to be suspended.  When the dream ends, the system will go to sleep as usual.
+'         to be suspended.  When the dream ends, the system will go to sleep as usual.
          Specify the component name or an empty string if none.
          Note that doze dreams are not subject to the same start conditions as ordinary dreams.
          Doze dreams will run whenever the power manager is in a dozing state. -->
@@ -644,9 +644,8 @@
     <string name="config_gpu_busy_path" translatable="false">/sys/kernel/gpu/gpu_busy</string>
     <string name="config_battery_level_path" translatable="false">/sys/class/power_supply/battery/capacity</string>
     
-    <!-- Add DeviceSettings To ZenHub-->
-    <string name="config_device_parts_package_name" translatable="false">org.lineageos.settings</string>
-    <string name="config_device_parts_package_activity" translatable="false">org.lineageos.settings.device.DOZE_SETTINGS</string>
+    <!-- Smart Charing is available -->
+    <bool name="config_smartChargingAvailable">true</bool>
 
     <!-- Smart charge sysfs node and value for suspend/resume charging-->
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
