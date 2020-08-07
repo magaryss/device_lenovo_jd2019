@@ -1,3 +1,5 @@
+import /vendor/etc/init/hw/init.safailnet.rc
+
 on init
     # Disable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
