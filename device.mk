@@ -41,14 +41,18 @@ PRODUCT_PACKAGES += \
     init.safailnet.rc \
     init.power.rc
 
-# Device-specific settings
+# CustomDoze
 PRODUCT_PACKAGES += \
     LenovoParts
+
+# WallPapers
+PRODUCT_PACKAGES += \
+    ZUIWalls
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
-    NexusLauncherRelease
+    Launcher3QuickStep
 
 # Display
 PRODUCT_PACKAGES += \

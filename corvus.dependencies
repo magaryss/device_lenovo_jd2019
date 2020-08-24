@@ -10,5 +10,11 @@
     "repository": "CorvusROM-Devices/vendor_lenovo_jd2019",
     "target_path": "vendor/lenovo/jd2019",
     "branch": "10"
+  },
+  {
+    "remote": "github",
+    "repository": "merser2005/packages_apps_ZUIWalls",
+    "target_path": "packages/apps/ZUIWalls",
+    "branch": "ten"
   }
 ]
