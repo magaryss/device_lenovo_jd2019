@@ -17,5 +17,21 @@
  */
 -->
 <resources>
+	<!-- DT2W -->
     <bool name="def_double_tap_to_wake">false</bool>
+
+	<!-- Bluetooth -->
+    <bool name="def_bluetooth_on">false</bool>
+
+	<!-- Set the automatic brightness mode on by default -->
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
+
+	<!-- Default screen brightness, from 0 to 255. 82 is 32%. -->
+    <integer name="def_screen_brightness">125</integer>
+	
+	<!-- Default for Settings.System.VIBRATE_WHEN_RINGING -->
+    <bool name="def_vibrate_when_ringing">true</bool>
+
+	<!-- Default for Settings.Global.APPLY_RAMPING_RINGER -->
+    <bool name="def_apply_ramping_ringer">false</bool>
 </resources>
