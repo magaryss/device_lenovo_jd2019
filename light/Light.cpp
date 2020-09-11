@@ -27,11 +27,9 @@
 #define BLUE_LED        "/sys/class/leds/blue/"
 #define GREEN_LED       "/sys/class/leds/green/"
 
-#define BREATH          "breath"
+#define BLINK           "blink"
 #define BRIGHTNESS      "brightness"
 #define MAX_BRIGHTNESS  "max_brightness"
-#define DELAY_OFF       "delay_off"
-#define DELAY_ON        "delay_on"
 
 namespace {
 /*
@@ -113,36 +111,24 @@ static void handleNotification(const LightState& state) {
     uint32_t greenBrightness = scaleBrightness((state.color >> 8) & 0xFF, getMaxBrightness(GREEN_LED MAX_BRIGHTNESS));
 
     /* Disable breathing or blinking */
-    set(RED_LED BREATH, 0);
-    set(RED_LED DELAY_OFF, 0);
-    set(RED_LED DELAY_ON, 0);
-
-    set(BLUE_LED BREATH, 0);
-    set(BLUE_LED DELAY_OFF, 0);
-    set(BLUE_LED DELAY_ON, 0);
-
-    set(GREEN_LED BREATH, 0);
-    set(GREEN_LED DELAY_OFF, 0);
-    set(GREEN_LED DELAY_ON, 0);
+    set(RED_LED BLINK, 0);
+    set(BLUE_LED BLINK, 0);
+    set(GREEN_LED BLINK, 0);
 
     switch (state.flashMode) {
         case Flash::HARDWARE:
             /* Breathing */
-            set(RED_LED BREATH, 1);
-            set(BLUE_LED BREATH, 1);
-            set(GREEN_LED BREATH, 1);
+            set(GREEN_LED BLINK, 1);
             break;
         case Flash::TIMED:
             /* Blinking */
-            set(RED_LED DELAY_OFF, state.flashOnMs);
-            set(RED_LED DELAY_ON, state.flashOffMs);
-            set(BLUE_LED DELAY_OFF, state.flashOnMs);
-            set(BLUE_LED DELAY_ON, state.flashOffMs);
-            set(GREEN_LED DELAY_OFF, state.flashOnMs);
-            set(GREEN_LED DELAY_ON, state.flashOffMs);
+            set(BLUE_LED BLINK, 1);
             break;
         case Flash::NONE:
         default:
+            set(RED_LED BLINK, 0);
+            set(BLUE_LED BLINK, 0);
+            set(GREEN_LED BLINK, 0);
              break;
     }
     set(RED_LED BRIGHTNESS, redBrightness);
