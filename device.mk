@@ -29,8 +29,13 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default
 
 # Camera
+ifeq ($(USE_GAPPS),true)
 PRODUCT_PACKAGES += \
-    Snap 
+    GCam
+else
+PRODUCT_PACKAGES += \
+    Snap
+endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/org.codeaurora.snapcam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.codeaurora.snapcam.xml
