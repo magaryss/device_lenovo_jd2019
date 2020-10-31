@@ -13,7 +13,7 @@
   },
   {
     "remote": "github",
-    "repository": "merser2005/packages_apps_ZUIWalls",
+    "repository": "magaryss/packages_apps_ZUIWalls",
     "target_path": "packages/apps/ZUIWalls",
     "branch": "ten"
   }
